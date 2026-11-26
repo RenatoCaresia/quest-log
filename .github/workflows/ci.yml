@@ -1,0 +1,47 @@
+# Pipeline de integração contínua do Quest Log.
+# Roda a cada push e a cada Pull Request. Se qualquer passo falhar,
+# o PR fica bloqueado para merge na main (quality gate).
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+# Se chegar um push novo no mesmo branch, cancela a execução antiga.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# O pipeline só precisa ler o código.
+permissions:
+  contents: read
+
+jobs:
+  qualidade:
+    name: Lint, tipos, testes e build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v6
+
+      - name: Instalar o Node.js (versão do .nvmrc)
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tipos
+        run: npm run typecheck
+
+      - name: Testes de unidade e integração
+        run: npm test
+
+      - name: Build
+        run: npm run build

@@ -1,0 +1,35 @@
+name: Bug
+description: Algo que não funciona como deveria
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Fluxo obrigatório: primeiro um teste que reproduz o bug (falhando), depois a correção. O teste fica na suíte como regressão."
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que deveria acontecer
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: ambiente
+    attributes:
+      label: Onde aconteceu
+      placeholder: "Produção, preview do PR #12, local; navegador e aparelho"

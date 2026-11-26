@@ -1,0 +1,19 @@
+# O Dependabot abre PRs semanais para atualizar dependências.
+# Cada PR passa pelo CI antes do merge, como qualquer outra mudança.
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: ci

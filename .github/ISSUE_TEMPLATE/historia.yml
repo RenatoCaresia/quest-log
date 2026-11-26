@@ -1,0 +1,34 @@
+name: História de usuário
+description: Uma funcionalidade descrita do ponto de vista de quem usa
+title: "QL-XX · "
+labels: ["feat"]
+body:
+  - type: textarea
+    id: historia
+    attributes:
+      label: História
+      description: "Como [quem], quero [o quê], para [por quê]."
+      placeholder: "Como usuário, quero ..., para ..."
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite (Dado / Quando / Então)
+      description: Antes da implementação, eles viram um arquivo .feature em docs/features.
+    validations:
+      required: true
+  - type: textarea
+    id: regras
+    attributes:
+      label: Regras de negócio envolvidas
+      description: Valores e limites. Se algum valor não estiver em docs/regras-do-jogo.md, ele é decidido antes, nunca inventado no código.
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Pronta para começar (Definition of Ready)
+      options:
+        - label: Critérios de aceite escritos
+        - label: Tela desenhada no wireframe, se houver interface
+        - label: Todos os valores de regra definidos
+        - label: Cabe em até 2 dias de trabalho
