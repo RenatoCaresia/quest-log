@@ -1,0 +1,22 @@
+# Backlog do MVP: uma issue por linha, na ordem em que devem ser criadas.
+# Formato: arquivo|título|label|milestone
+S0-01.md|S0-01 · README, licença, processo e templates|docs|Sprint 0
+S0-02.md|S0-02 · Criar o projeto Next.js|chore|Sprint 0
+S0-03.md|S0-03 · Pipeline de CI e proteção da main|ci|Sprint 0
+S0-04.md|S0-04 · Vitest e primeiro ciclo de TDD (cálculo de nível)|test|Sprint 0
+S0-05.md|S0-05 · Supabase local, staging e produção|chore|Sprint 0
+S0-06.md|S0-06 · Deploy na Vercel com preview por PR|chore|Sprint 0
+S0-07.md|S0-07 · Chaves do TMDB, da Twitch (IGDB) e registro na Open Library|chore|Sprint 0
+S0-08.md|S0-08 · Spike: Open Library com 10 livros brasileiros|spike|Sprint 0
+S0-09.md|S0-09 · Identidade visual|design|Sprint 0
+S0-10.md|S0-10 · Wireframes das telas do MVP|design|Sprint 0
+S0-11.md|S0-11 · Decidir as regras pendentes|docs|Sprint 0
+QL-01.md|QL-01 · Criar conta e entrar|feat|Sprint 1
+QL-02.md|QL-02 · Buscar títulos|feat|Sprint 2
+QL-03.md|QL-03 · Adicionar ao backlog|feat|Sprint 2
+QL-04.md|QL-04 · Gerenciar o backlog|feat|Sprint 3
+QL-05.md|QL-05 · Ganhar XP e subir de nível|feat|Sprint 3
+QL-06.md|QL-06 · Desbloquear conquistas|feat|Sprint 4
+QL-07.md|QL-07 · Criar side quests e metas|feat|Sprint 4
+QL-08.md|QL-08 · Ver meu início e meu perfil|feat|Sprint 5
+QL-09.md|QL-09 · Compartilhar nos stories|feat|Sprint 5
