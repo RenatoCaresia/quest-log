@@ -45,4 +45,15 @@ describe("calcularNivel", () => {
     // Assert
     expect(nivel).toBe(2);
   });
+
+  it("calcularNivel_Com3000Xp_RetornaNivel3", () => {
+    // Arrange
+    const xp = 3000;
+
+    // Act
+    const nivel = calcularNivel(xp);
+
+    // Assert
+    expect(nivel).toBe(3);
+  });
 });
