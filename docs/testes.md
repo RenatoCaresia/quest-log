@@ -41,9 +41,9 @@ import { describe, it, expect } from 'vitest'
 import { calcularNivel } from './nivel'
 
 describe('calcularNivel', () => {
-  it('calcularNivel_Com100Xp_RetornaNivel2', () => {
+  it('calcularNivel_Com1000Xp_RetornaNivel2', () => {
     // Arrange
-    const xp = 100
+    const xp = 1000
 
     // Act
     const nivel = calcularNivel(xp)
@@ -60,9 +60,9 @@ Em todo limite numérico, teste o valor exato, um abaixo e um acima.
 
 | Regra | Limite | Valores testados |
 | --- | --- | --- |
-| Subir para o nível 2 | 100 XP | 99, 100, 101 |
-| Subir para o nível 3 | 300 XP | 299, 300, 301 |
-| Subir para o nível 5 | 1.000 XP | 999, 1.000, 1.001 |
+| Subir para o nível 2 | 1.000 XP | 999, 1.000, 1.001 |
+| Subir para o nível 3 | 3.000 XP | 2.999, 3.000, 3.001 |
+| Subir para o nível 5 | 10.000 XP | 9.999, 10.000, 10.001 |
 | Itens de uma quest | 1 a 10 | 0, 1, 2 e 9, 10, 11 |
 | Prazo de uma quest | até 90 dias | 89, 90, 91 |
 | Itens de uma meta | 1 a 100 | 0, 1, 2 e 99, 100, 101 |
