@@ -12,7 +12,16 @@ describe("calcularNivel", () => {
     [1000, 2],
     [1001, 2],
     // Limite do nível 3
+    [2999, 2],
     [3000, 3],
+    [3001, 3],
+    // Limite do nível 5
+    [9999, 4],
+    [10000, 5],
+    [10001, 5],
+    // Sem nível máximo
+    [190000, 20],
+    [990000, 45],
   ])("calcularNivel_Com%iXp_RetornaNivel%i", (xp, nivelEsperado) => {
     // Arrange: o XP e o nível esperado vêm da linha da tabela
 
