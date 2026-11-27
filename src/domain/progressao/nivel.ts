@@ -3,5 +3,11 @@
  * As regras estão em docs/regras-do-jogo.md.
  */
 export function calcularNivel(xp: number): number {
-  return xp >= 1000 ? 2 : 1;
+  if (xp >= 3000) {
+    return 3;
+  }
+  if (xp >= 1000) {
+    return 2;
+  }
+  return 1;
 }
