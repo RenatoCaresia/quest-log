@@ -31,4 +31,15 @@ describe("calcularNivel", () => {
     // Assert
     expect(nivel).toBe(nivelEsperado);
   });
+
+  it("calcularNivel_ComXpNegativo_LancaErro", () => {
+    // Arrange
+    const xp = -1;
+
+    // Act
+    const calcular = () => calcularNivel(xp);
+
+    // Assert
+    expect(calcular).toThrow(RangeError);
+  });
 });
