@@ -36,6 +36,9 @@ XP(n) = 50 · n · (n − 1)
 
 Nível a partir do XP: `n = piso((1 + raiz(1 + 0,08 · XP)) / 2)`.
 
+- Não existe nível máximo: o nível segue a fórmula para qualquer XP. Decidido em 2026-11-27.
+- XP negativo é um erro: o XP total nunca fica abaixo de zero, então um valor negativo indica bug em outra parte do sistema. Decidido em 2026-11-27.
+
 | Níveis | Título |
 | --- | --- |
 | 1 a 4 | Aprendiz |
@@ -88,4 +91,3 @@ Estas regras ainda não estão definidas. Cada uma precisa de resposta antes do 
 5. **Trocar a nota (QL-05):** mudar a nota de um item dá os 10 XP de novo?
 6. **Concluir de novo (QL-05):** reassistir ou rejogar algo já concluído dá XP?
 7. **Meta criada no meio do ano (QL-07):** itens concluídos no mesmo ano, antes da criação da meta, contam?
-8. **XP negativo (S0-04):** o cálculo de nível pode receber XP negativo? Se receber, deve dar erro ou tratar como 0?
