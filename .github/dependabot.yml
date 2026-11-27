@@ -1,5 +1,6 @@
 # O Dependabot abre PRs semanais para atualizar dependências.
 # Cada PR passa pelo CI antes do merge, como qualquer outra mudança.
+# Pacotes que precisam da mesma versão andam juntos, num PR só.
 
 version: 2
 updates:
@@ -10,6 +11,13 @@ updates:
     open-pull-requests-limit: 5
     commit-message:
       prefix: chore
+    groups:
+      react:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
+      next:
+        patterns: ["next", "eslint-config-next"]
+      tailwind:
+        patterns: ["tailwindcss", "@tailwindcss/*"]
 
   - package-ecosystem: github-actions
     directory: /
@@ -17,3 +25,6 @@ updates:
       interval: weekly
     commit-message:
       prefix: ci
+    groups:
+      actions:
+        patterns: ["*"]
