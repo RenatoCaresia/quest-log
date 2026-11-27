@@ -18,6 +18,15 @@ updates:
         patterns: ["next", "eslint-config-next"]
       tailwind:
         patterns: ["tailwindcss", "@tailwindcss/*"]
+    # Majors que exigem trabalho próprio antes de entrar:
+    # - ESLint 10: depende de o eslint-config-next suportar a nova versão.
+    # - TypeScript 7: no Next.js exige a opção experimental.useTypeScriptCli.
+    # Quando chegar a hora, remova a linha e trate a atualização numa issue.
+    ignore:
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: /
