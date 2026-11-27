@@ -17,6 +17,10 @@ export function xpParaAlcancarNivel(nivel: number): number {
  * com raiz quadrada.
  */
 export function calcularNivel(xp: number): number {
+  if (xp < 0) {
+    throw new RangeError(`XP inválido: ${xp}. O XP total nunca é negativo.`);
+  }
+
   let nivel = 1;
   while (xpParaAlcancarNivel(nivel + 1) <= xp) {
     nivel++;
