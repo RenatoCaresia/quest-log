@@ -5,8 +5,9 @@ describe("calcularNivel", () => {
   // Cada linha é um exemplo do Esquema do Cenário de
   // docs/features/ql-05-xp-e-niveis.feature: [xp, nível esperado].
   it.each([
-    // Sem XP
+    // Sem XP (o -1 está no teste de erro, logo abaixo)
     [0, 1],
+    [1, 1],
     // Limite do nível 2
     [999, 1],
     [1000, 2],
