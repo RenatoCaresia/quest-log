@@ -43,8 +43,8 @@ O histórico conta a história de cada ciclo de TDD.
 Um ciclo completo fica assim:
 
 ```
-red: calcularNivel retorna 2 com exatamente 100 XP
-green: implementa calcularNivel pela fórmula 50·n·(n−1)
+red: calcularNivel retorna 2 com exatamente 1.000 XP
+green: implementa calcularNivel pela fórmula 500·n·(n−1)
 refactor: extrai xpParaAlcancarNivel
 ```
 

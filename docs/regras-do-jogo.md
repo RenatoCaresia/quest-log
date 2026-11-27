@@ -1,17 +1,17 @@
 # Regras do jogo
 
-Esta é a fonte da verdade das regras de gamificação. Os valores abaixo foram confirmados pelo Renato em 2026-11-26. Um valor só muda junto com um teste que descreve a mudança. Valor que não está aqui não é inventado no código: vai para "Decisões pendentes" e é decidido antes.
+Esta é a fonte da verdade das regras de gamificação. Os valores abaixo foram confirmados pelo Renato em 2026-11-26 e multiplicados por 10 em 2026-11-27, para os números serem mais satisfatórios sem mudar o ritmo de progressão. Na mesma data, a nota e as conquistas ganharam mais peso. Um valor só muda junto com um teste que descreve a mudança. Valor que não está aqui não é inventado no código: vai para "Decisões pendentes" e é decidido antes.
 
 ## XP
 
 | Ação | XP |
 | --- | --- |
-| Concluir um filme | 50 |
-| Concluir uma série | 150 |
-| Concluir um livro | 150 |
-| Concluir um jogo | 200 |
-| Dar nota a um item concluído | 10 |
-| Desbloquear uma conquista | 25 |
+| Concluir um filme | 500 |
+| Concluir uma série | 1.500 |
+| Concluir um livro | 1.500 |
+| Concluir um jogo | 2.000 |
+| Dar nota a um item concluído | 200 |
+| Desbloquear uma conquista | 500 |
 | Completar uma side quest ou meta | Metade do XP base dos itens pedidos |
 | Abandonar ou pausar um item | 0, sem penalidade |
 
@@ -23,18 +23,22 @@ Esta é a fonte da verdade das regras de gamificação. Os valores abaixo foram 
 XP total necessário para chegar ao nível *n*:
 
 ```
-XP(n) = 50 · n · (n − 1)
+XP(n) = 500 · n · (n − 1)
 ```
 
 | Nível | XP total |
 | --- | --- |
 | 1 | 0 |
-| 2 | 100 |
-| 3 | 300 |
-| 4 | 600 |
-| 5 | 1.000 |
+| 2 | 1.000 |
+| 3 | 3.000 |
+| 4 | 6.000 |
+| 5 | 10.000 |
+| 10 | 45.000 |
+| 20 | 190.000 |
 
-Nível a partir do XP: `n = piso((1 + raiz(1 + 0,08 · XP)) / 2)`.
+Nível a partir do XP: `n = piso((1 + raiz(1 + 0,008 · XP)) / 2)`.
+
+Subir do nível *n* para o *n + 1* custa 1.000 · *n* de XP: cada nível pede 1.000 a mais que o anterior.
 
 - Não existe nível máximo: o nível segue a fórmula para qualquer XP. Decidido em 2026-11-27.
 - XP negativo é um erro: o XP total nunca fica abaixo de zero, então um valor negativo indica bug em outra parte do sistema. Decidido em 2026-11-27.
