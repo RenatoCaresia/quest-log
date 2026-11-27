@@ -13,9 +13,9 @@ describe("calcularNivel", () => {
     expect(nivel).toBe(1);
   });
 
-  it("calcularNivel_Com100Xp_RetornaNivel2", () => {
+  it("calcularNivel_Com1000Xp_RetornaNivel2", () => {
     // Arrange
-    const xp = 100;
+    const xp = 1000;
 
     // Act
     const nivel = calcularNivel(xp);
@@ -24,9 +24,9 @@ describe("calcularNivel", () => {
     expect(nivel).toBe(2);
   });
 
-  it("calcularNivel_Com99Xp_RetornaNivel1", () => {
+  it("calcularNivel_Com999Xp_RetornaNivel1", () => {
     // Arrange
-    const xp = 99;
+    const xp = 999;
 
     // Act
     const nivel = calcularNivel(xp);
@@ -35,9 +35,9 @@ describe("calcularNivel", () => {
     expect(nivel).toBe(1);
   });
 
-  it("calcularNivel_Com101Xp_RetornaNivel2", () => {
+  it("calcularNivel_Com1001Xp_RetornaNivel2", () => {
     // Arrange
-    const xp = 101;
+    const xp = 1001;
 
     // Act
     const nivel = calcularNivel(xp);
